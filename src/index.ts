@@ -1,9 +1,7 @@
 /**
  * @providesModule MusicControl
  */
-// @ts-ignore
 import { NativeModules, DeviceEventEmitter, NativeEventEmitter, Platform } from 'react-native'
-// @ts-ignore
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
 // @ts-ignore
 import constants from './constants'

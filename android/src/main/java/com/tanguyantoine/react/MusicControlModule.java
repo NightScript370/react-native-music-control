@@ -196,6 +196,8 @@ public class MusicControlModule extends ReactContextBaseJavaModule implements Co
             nb.setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE);
         }
 
+        nb.build();
+
         updateNotificationMediaStyle();
 
         state = pb.build();
@@ -242,6 +244,10 @@ public class MusicControlModule extends ReactContextBaseJavaModule implements Co
 
             // The getter method to acquire the service.
             MusicControlNotification.NotificationService notificationService = binder.getService();
+
+            /*if (notificationService != null) {
+                notificationService.forceForeground();
+            } */
 
             // Release the connection to prevent leaks.
             context.unbindService(this);
